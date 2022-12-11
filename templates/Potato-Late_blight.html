@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>POTATO LEAF DISEASE PREDICTION</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/bg2.jpg')}}">
+
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem; background-color: antiquewhite; color:black;">Predict Potato Leaf Disease </h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5"style="display:grid;" >
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <center><img src="{{url_for('static',filename = 'images/late2.jpg' )}}" alt="User Image" style="width:600px;height:400px; border-color: white;">
+                    </center>
+
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+
+                </div>
+                <h4 style=" padding : 10px ; background-color:burlywood; color:darkslategray">Prediction Accuracy:</h4>
+                <div class="details">
+					
+					<center><h4 style="color:black; background-color:beige; justify-content: center;"> <b>Details </b></h4></center>
+                    <h6 style="padding: 15px; background-color:aliceblue; color:black ">
+
+
+                        
+                        <b>Disease symptoms:</b><br>
+                        <b>-></b>This disease damages leaves, stems and tubers. Affected leaves appear blistered as if scalded by hot water and eventually rot and dry out.<br>
+                        <b>-></b>When drying out, leaves turn brown or black in color. When infections are still active, spots appear on the underside of leaves blanketed in what looks like flour.<br>
+                        <b>-></b>Affected stems begin to blacken from their tips, and eventually dry out.<br>
+                        <b>-></b>Severe infections cause all foliage to rot, dry out and fall to the ground, stems to dry out and plants to die.<br>
+                        <b>-></b>Affected tubers display dry brown-colored spots on their skins and flesh. This disease acts very quickly. If it is not controlled, infected plants will die within two or three days.</br></br>
+                        
+
+                    </h6>
+                    
+                </div>
+                <div class="tretment">
+                    <center><h4 style="color:black; background-color:beige; justify-content: center;"> <b>Treatment </b></h4></center>
+                    <h6 style="padding: 15px ;background-color:aliceblue;justify-self: center; display: block;">
+                    
+                        <b>1.</b>Plant resistant cultivars when available.<br>
+                        <b>2.</b>Remove volunteers from the garden prior to planting and space plants far enough apart to allow for plenty of air circulation.<br>
+                        <b>3.</b>Water in the early morning hours, or use soaker hoses, to give plants time to dry out during the day — avoid overhead irrigation.<br>
+                        <b>4.</b>Destroy all tomato and potato debris after harvest .<br>
+                        
+                </h6>
+                
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>POTATO LEAF DISEASE PREDICTION</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+		
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/bg2.jpg')}}" style="background-repeat:no-repeat; background-size: cover; background-position: center; height: 100%;">
+
+
+
+    <div>
+        <h1 style="text-align:center;font-size:4rem; background-color: antiquewhite; color:black;">Predict Potato Leaf Disease </h1>
+    </div>
+
+   <br>
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5" style="display:grid;">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <center><img src="{{url_for('static',filename = 'images/png1.png' )}}" alt="User Image" style="width:1000px;height:400px;"></center><br>
+                    <center><img src="{{url_for('static',filename = 'images/healthy1.JPG' )}}" alt="User Image" style="width:750px;height:400px;"></center>
+                    
+                    
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+					
+					<center><h2 style="background-color:beige; color:gold; border-color: aliceblue;"><b> Hurrayyyyyy!!!!!! There is no disease on the Potato leaf. </b> </h2></center>
+               
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
